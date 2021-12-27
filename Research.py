@@ -78,9 +78,6 @@ if name:
         a=df.shape
         st.write('Shape of Datafrane (Rows, Columns):',a)
         st.success('Shape of dataframe is displayed successfully!!!')
-        if a[0]==0:
-            st.dataframe(df)
-            st.error("Bad file for analysis contain no data after dropping null values")
 #--------------------------------------------------------------------------------------------------------------------------------
         d=df.columns
         data = {'column_names': d }
@@ -229,7 +226,8 @@ if name:
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------
             st.write("Train & Test Split:")
             X1=training_feature
-            y1=df[y]
+            row4=len(X1)
+            y1=df[y].head(row4)
             from sklearn.model_selection import train_test_split
             X_train, X_test, y_train, y_test = train_test_split(X1, y1, test_size = 0.2,random_state=100)
             st.write("X_train:")
