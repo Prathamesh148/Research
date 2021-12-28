@@ -79,6 +79,9 @@ if name:
         try:
             st.write('Shape of Datafrane (Rows, Columns):',a)
             st.success('Shape of dataframe is displayed successfully!!!')
+            if a[0]==0:
+                st.dataframe(df)
+                st.error("Bad file for analysis contain no data after dropping null values")
         return Exception:
             st.write('no. of rows:',len(df))
             st.success('Shape of dataframe is displayed successfully!!!')
