@@ -27,6 +27,7 @@ from sklearn.metrics import mean_squared_error
 #------------------------------------------------------------------------------------------------------------------------------------
 st.header('Automating Some Task of Data Scientist !!!')
 add_selectbox = st.sidebar.markdown(':sunglasses: Name:Prathamesh Laxman Kashid :sunglasses:')
+add_selectbox = st.sidebar.markdown(':sunglasses: Email:kashidprathamesh12@gmail.com :sunglasses:')
 add_selectbox = st.sidebar.markdown("------------------------------")
 add_selectbox = st.sidebar.markdown("Future scope: To integrate DL models :sunglasses:")
 add_selectbox = st.sidebar.markdown("------------------------------")
@@ -247,6 +248,7 @@ if name:
             X_train, X_test, y_train, y_test = train_test_split(X1, y1, test_size = 0.2,random_state=100)
             st.write("X_train:")
             X_train=X_train.replace(np.nan,0)
+            X_train=X_train.replace("?",0)
             st.dataframe(X_train)
             row2=len(X_train)
             st.write(row2)
@@ -262,7 +264,6 @@ if name:
             st.write("Select ML Type:")
             click=st.checkbox('Supervised:')
             if click==True:
-                st.write("Select ML Model:")
                 b=('Linear Regression','Logistic Regression','Decision Tree','Naive Bayes','support vector machine','K-nearest Neighbor')
                 click= st.selectbox("Select Model Type:",b)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
