@@ -27,7 +27,7 @@ from sklearn.metrics import mean_squared_error
 #------------------------------------------------------------------------------------------------------------------------------------
 st.header('Automating Some Task of Data Scientist !!!')
 add_selectbox = st.sidebar.markdown(':sunglasses: Name:Prathamesh Laxman Kashid :sunglasses:')
-add_selectbox = st.sidebar.markdown(':sunglasses: Email:kashidprathamesh12@gmail.com :sunglasses:')
+add_selectbox = st.sidebar.markdown('Email:kashidprathamesh12@gmail.com :sunglasses:')
 add_selectbox = st.sidebar.markdown("------------------------------")
 add_selectbox = st.sidebar.markdown("Future scope: To integrate DL models :sunglasses:")
 add_selectbox = st.sidebar.markdown("------------------------------")
@@ -253,6 +253,8 @@ if name:
             row2=len(X_train)
             st.write(row2)
             st.write("X_test:")
+            X_test=X_test.replace(np.nan,0)
+            X_test=X_test.replace("?",0)
             st.dataframe(X_test)
             row3=len(X_test)
             st.write(row3)
