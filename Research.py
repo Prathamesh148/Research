@@ -76,8 +76,14 @@ if name:
             st.success("Successfully droped all null values")
 #--------------------------------------------------------------------------------------------------------------------------------------
         a=df.shape
-        st.write('Shape of Datafrane (Rows, Columns):',a)
-        st.success('Shape of dataframe is displayed successfully!!!')
+        try:
+            st.write('Shape of Datafrane (Rows, Columns):',a)
+            st.success('Shape of dataframe is displayed successfully!!!')
+        return Exception:
+            st.write('no. of rows:',len(df))
+            st.success('Shape of dataframe is displayed successfully!!!')
+        
+                
 #--------------------------------------------------------------------------------------------------------------------------------
         d=df.columns
         data = {'column_names': d }
