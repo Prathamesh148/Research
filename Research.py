@@ -246,7 +246,7 @@ if name:
             from sklearn.model_selection import train_test_split
             X_train, X_test, y_train, y_test = train_test_split(X1, y1, test_size = 0.2,random_state=100)
             st.write("X_train:")
-            #X_train=X_train.dropna( axis=0, inplace=True)
+            X_train=X_train.replace(np.nan,0)
             st.dataframe(X_train)
             row2=len(X_train)
             st.write(row2)
@@ -393,7 +393,7 @@ if name:
 #======================================================================================================================================================================
             click=st.checkbox('Unsupervised:')
             if click==True:
-                st.write("updating soon")
+                st.write("updating soon!!!")
 ##                b=('Kmeans','PCA')
 ##                click= st.selectbox("Select Model Type:",b)
 ###--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
