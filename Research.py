@@ -25,7 +25,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import r2_score, mean_absolute_error, mean_absolute_percentage_error, mean_squared_log_error, accuracy_score
 from sklearn.metrics import mean_squared_error
 #------------------------------------------------------------------------------------------------------------------------------------
-st.header('Automating Some Task of Data Scientist !!!')
+st.header('Data Science Automation!!!')
 add_selectbox = st.sidebar.markdown(':sunglasses: Name:Prathamesh Laxman Kashid :sunglasses:')
 add_selectbox = st.sidebar.markdown('Email:kashidprathamesh12@gmail.com :sunglasses:')
 add_selectbox = st.sidebar.markdown("------------------------------")
